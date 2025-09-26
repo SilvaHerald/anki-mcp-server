@@ -1,0 +1,27 @@
+{
+  "recommendations": [
+    "mikestead.dotenv",
+    "humao.rest-client",
+    "yoavbls.pretty-ts-errors",
+    "github.vscode-github-actions",
+    "ms-ossdata.vscode-pgsql",
+    "dbaeumer.vscode-eslint",
+    "me-dutour-mathieu.vscode-github-actions",
+    "omartawfik.github-actions-vscode",
+    "bierner.github-markdown-preview",
+    "ms-vscode.makefile-tools",
+    "esbenp.prettier-vscode",
+    "chakrounanas.turbo-console-log",
+    "yatki.vscode-surround",
+    "redhat.vscode-yaml",
+    "meganrogge.template-string-converter",
+    "ionutvmi.path-autocomplete",
+    "christian-kohler.path-intellisense",
+    "stringham.move-ts",
+    "aaron-bond.better-comments",
+    "chunsen.bracket-select",
+    "johnpapa.vscode-peacock",
+    "ms-azuretools.vscode-docker",
+    "ms-vscode-remote.remote-wsl"
+  ]
+}

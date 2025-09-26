@@ -1,0 +1,62 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# Top-most EditorConfig file
+root = true
+
+# All files
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+max_line_length = 100
+
+# JavaScript/TypeScript files
+[*.{js,jsx,ts,tsx}]
+indent_style = space
+indent_size = 2
+max_line_length = 100
+quote_type = single
+
+# JSON files
+[*.json]
+indent_style = space
+indent_size = 2
+insert_final_newline = false
+
+# YAML files
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2
+
+# Markdown files
+[*.{md,mdx}]
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = false
+max_line_length = false
+
+# Python files
+[*.py]
+indent_style = space
+indent_size = 4
+max_line_length = 88
+
+# Windows batch files
+[*.{bat,cmd}]
+indent_style = space
+indent_size = 2
+end_of_line = crlf
+
+# Makefiles
+[{Makefile,makefile,*.mk}]
+indent_style = tab
+indent_size = 4
+
+# .env files
+[.env*]
+indent_style = space
+indent_size = 2
+insert_final_newline = false
