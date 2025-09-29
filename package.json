@@ -25,7 +25,7 @@
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
     "mcp:inspect": "nest build && npx @modelcontextprotocol/inspector node dist/main.js",
-    "client:start": "nest build && tsx src/mcp-client.ts"
+    "client:start": "nest build && node dist/mcp-client.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.18.1",
