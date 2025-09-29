@@ -134,5 +134,6 @@ MIT — free to use, modify, and distribute.
 ## 🙌 Acknowledgements
 - [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro)
 - [NestJS](https://nestjs.com/)
+- [MCP-Nest](https://github.com/rekog-labs/MCP-Nest)
 - [Anki](https://apps.ankiweb.net/) + [AnkiConnect](https://git.sr.ht/~foosoft/anki-connect)
 - [Ollama](https://ollama.com/) and open-source LLMs (DeepSeek, Qwen, LLaMA, ...etc)
