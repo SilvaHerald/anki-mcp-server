@@ -43,9 +43,9 @@ type CardOut = {
 
 Return shape: { "cards": CardOut[] }
 
-STRICT RULES — if any rule cannot be met, return {"cards": []}:
+9 STRICT RULES — if any rule cannot be met, return {"cards": []}:
 1. Output must be valid JSON only. No markdown. No comments. No code fences. No reasoning or extra prose.
-2. For EACH input item, create TWO cards with models: Basic, Cloze.
+2. For EACH input item, create only TWO cards with models: Basic, Cloze.
 3. The natural sentence that uses the target word/phrase in Basic and Cloze cards must be different.
 4. Item type mapping:
   - single word (e.g., "buy", "take", "burn") → deck "Languages::English::New Words", tag "new_word".
@@ -64,19 +64,20 @@ STRICT RULES — if any rule cannot be met, return {"cards": []}:
     Example: "Definition (EN): to set something on fire or damage by fire\nDefinition (${language}): đốt; thiêu\nExample: The chef burned the toast by mistake.\nSynonyms: ignite, scorch, set on fire"
 9. CLOZE card fields:
   - model = "Cloze"
-  - fields.Text = a random real-life sentence where the target is clozed using these rules:
-     +) Sentence must be different from the setence in Front of Basic card.
-     +) If the target is a word with more than 3 characters then clozed EXACTLY three random letters of the target as the hint.
-     +) If the target is a word with less or equal 3 characters then clozed EXACTLY one random letter of the target as the hint.
-     +) If the target is a phrasal verb or a idiom then clozed a random part of it as the hint.
+  - fields.Text = a random real-life sentence where the target is clozed using these 5 rules:
+     1. Sentence must be different from the setence in Front of Basic card.
+     2. The target word/phrase must be clozed. For example: the target word/phrase is "burn" then it must be clozed.
+     3. If the target is a word with more than 3 characters then clozed EXACTLY three random letters of the target as the hint.
+     4. If the target is a word with less or equal 3 characters then clozed EXACTLY one random letter of the target as the hint.
+     5. If the target is a phrasal verb or a idiom then clozed a random part of it as the hint.
       Examples:
-        * target word "buy"   → "I plan to bu{{c1::y}} a new phone."
+        * target word "buy" → "I plan to bu{{c1::y}} a new phone."
         * target word "thought" → "His {{c1::tho}}ught was surprising."
         * target phrasal verb "go off" → "His alarm {{c1::goes}} off at 6am."
         * target idiom "rain dogs and cats" → "It rained {{c1::dogs and cats}} yesterday."
   - fields.BackExtra = the same sentence fully written with the target visible (no cloze)
       Examples:
-        * target word "buy"   → "I plan to buy a new phone."
+        * target word "buy" → "I plan to buy a new phone."
         * target word "thought" → "His thought was surprising."
         * target phrasal verb "go off" → "His alarm goes off at 6am."
         * target idiom "rain dogs and cats" → "It rained dogs and cats yesterday."
