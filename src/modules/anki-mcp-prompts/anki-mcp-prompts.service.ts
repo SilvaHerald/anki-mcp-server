@@ -45,7 +45,7 @@ Return shape: { "cards": CardOut[] }
 
 9 STRICT RULES — if any rule cannot be met, return {"cards": []}:
 1. Output must be valid JSON only. No markdown. No comments. No code fences. No reasoning or extra prose.
-2. For EACH input item, create only TWO cards with models: Basic, Cloze.
+2. For EACH input item, create ONLY ONE BASIC card and ONLY ONE CLOZE card.
 3. The natural sentence that uses the target word/phrase in Basic and Cloze cards must be different.
 4. Item type mapping:
   - single word (e.g., "buy", "take", "burn") → deck "Languages::English::New Words", tag "new_word".
